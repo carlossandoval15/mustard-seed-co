@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Mustard Seed Co. — Brand Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root {
+  --olive: #4A5D23;
+  --olive-dark: #3A4A1C;
+  --olive-light: #6B7F3A;
+  --mustard: #D4A017;
+  --mustard-light: #E8B830;
+  --orange: #D4762C;
+  --orange-light: #E8944A;
+  --cream: #F5F0E8;
+  --cream-dark: #E8E0D0;
+  --charcoal: #2C2C2C;
+  --charcoal-light: #4A4A4A;
+  --white: #FDFBF7;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--olive-dark);
+  color: var(--cream);
+  padding: 60px 24px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 40%, rgba(212,160,23,0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, rgba(212,118,44,0.06) 0%, transparent 50%);
+}
+.hero-logo {
+  width: 120px; height: 120px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  position: relative;
+}
+.hero .est {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 8px;
+  position: relative;
+}
+.hero .tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  position: relative;
+}
+.hero .sub {
+  font-size: 11px;
+  opacity: 0.5;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* ── SECTIONS ── */
+section { padding: 40px 20px; }
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: var(--olive);
+  margin-bottom: 4px;
+}
+.section-sub {
+  font-size: 12px;
+  color: var(--charcoal-light);
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+.divider {
+  width: 40px; height: 3px;
+  background: var(--mustard);
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+
+/* ── COLOR PALETTE ── */
+.palette { background: var(--cream); }
+.color-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.color-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.color-swatch {
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px 12px;
+}
+.color-swatch span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.color-info {
+  background: white;
+  padding: 10px 12px;
+}
+.color-name {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.color-hex {
+  font-size: 11px;
+  color: var(--charcoal-light);
+  font-family: monospace;
+}
+.color-full {
+  grid-column: 1 / -1;
+}
+.color-full .color-swatch { height: 60px; }
+
+/* ── LOGO SYSTEM ── */
+.logo-system { background: var(--white); }
+.logo-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 32px 20px;
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+.logo-card.dark {
+  background: var(--charcoal);
+}
+.logo-card .badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--olive);
+  color: white;
+}
+.logo-card .badge.secondary {
+  background: var(--mustard);
+  color: var(--charcoal);
+}
+.logo-card .badge.bold {
+  background: var(--orange);
+  color: white;
+}
+.logo-card .label {
+  font-size: 11px;
+  color: var(--charcoal-light);
+  margin-top: 16px;
+  letter-spacing: 1px;
+}
+.logo-card.dark .label { color: rgba(255,255,255,0.5); }
+
+/* SVG Logos */
+.logo-svg { max-width: 200px; margin: 0 auto; display: block; }
+.logo-svg.small { max-width: 60px; }
+.logo-svg.med { max-width: 140px; }
+
+/* ── TYPOGRAPHY ── */
+.type-section { background: var(--cream); }
+.type-sample {
+  background: white;
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.type-sample .font-name {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 8px;
+}
+.type-sample .display {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.type-sample .body-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--charcoal-light);
+  line-height: 1.6;
+}
+.type-sample .bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: var(--charcoal);
+  line-height: 1;
+}
+.type-sample .usage {
+  font-size: 11px;
+  color: var(--olive-light);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ── MOCKUPS ── */
+.mockups { background: var(--white); }
+.mockup-card {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  position: relative;
+}
+.mockup-visual {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.mockup-info {
+  padding: 16px 20px;
+  background: white;
+}
+.mockup-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.mockup-info p {
+  font-size: 12px;
+  color: var(--charcoal-light);
+}
+.mockup-tag {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* Tee mockup */
+.tee-mockup {
+  background: var(--charcoal);
+  flex-direction: column;
+}
+.tee-shape {
+  width: 200px; height: 220px;
+  background: var(--charcoal);
+  border-radius: 8px 8px 60px 60px;
+  border: 2px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.tee-shape::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px; height: 20px;
+  border-radius: 0 0 25px 25px;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-top: none;
+}
+.tee-shape .logo-on-tee {
+  opacity: 0.95;
+}
+
+/* Hoodie mockup */
+.hoodie-mockup {
+  background: var(--olive-dark);
+  flex-direction: column;
+}
+.hoodie-shape {
+  width: 220px; height: 240px;
+  background: var(--olive-dark);
+  border-radius: 8px 8px 20px 20px;
+  border: 2px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 30px;
+  position: relative;
+}
+.hoodie-shape::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: 50%; transform: translateX(-50%);
+  width: 40px; height: 30px;
+  border-radius: 0 0 20px 20px;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-top: none;
+}
+.hoodie-shape::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 60px; height: 2px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Hat mockup */
+.hat-mockup {
+  background: linear-gradient(135deg, var(--cream-dark) 0%, var(--cream) 100%);
+}
+.hat-shape {
+  width: 180px; height: 100px;
+  background: var(--olive);
+  border-radius: 100px 100px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 40px;
+}
+.hat-brim {
+  position: absolute;
+  bottom: -12px;
+  width: 220px; height: 24px;
+  background: var(--olive-dark);
+  border-radius: 0 0 110px 110px;
+}
+
+/* Sticker mockup */
+.sticker-mockup {
+  background: linear-gradient(135deg, #e8e0d0 0%, #f5f0e8 100%);
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.sticker {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+.sticker.olive { background: var(--olive); }
+.sticker.mustard { background: var(--mustard); }
+.sticker.orange { background: var(--orange); }
+.sticker.cream-st { background: var(--cream); border: 2px solid var(--olive); }
+
+/* Back print mockup */
+.back-mockup {
+  background: var(--cream-dark);
+  flex-direction: column;
+}
+.back-tee {
+  width: 220px; height: 260px;
+  background: var(--charcoal);
+  border-radius: 8px 8px 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* ── USAGE GUIDE ── */
+.usage-section { background: var(--cream); }
+.do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.do-card, .dont-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+.do-card { border-top: 3px solid var(--olive); }
+.dont-card { border-top: 3px solid #c0392b; }
+.do-card h4, .dont-card h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.do-card h4 { color: var(--olive); }
+.dont-card h4 { color: #c0392b; }
+.do-card p, .dont-card p {
+  font-size: 11px;
+  color: var(--charcoal-light);
+  line-height: 1.5;
+}
+
+/* ── APPAREL LINE ── */
+.lineup { background: var(--white); }
+.product-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product-icon {
+  width: 60px; height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.product-icon.olive-bg { background: var(--olive); }
+.product-icon.mustard-bg { background: var(--mustard); }
+.product-icon.orange-bg { background: var(--orange); }
+.product-icon.charcoal-bg { background: var(--charcoal); }
+.product-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+.product-info p {
+  font-size: 11px;
+  color: var(--charcoal-light);
+  line-height: 1.4;
+}
+.product-info .price {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--olive);
+  margin-top: 4px;
+}
+
+/* ── BRAND STORY ── */
+.brand-story {
+  background: var(--olive-dark);
+  color: var(--cream);
+  text-align: center;
+}
+.brand-story .section-title { color: var(--mustard-light); }
+.brand-story .divider { background: var(--orange); margin: 0 auto 24px; }
+.brand-story p {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 400px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+.brand-story .verse {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 24px;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+.brand-story .ref {
+  font-size: 11px;
+  opacity: 0.4;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--charcoal);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+footer strong { color: var(--mustard-light); }
+
+/* ── PRICE TIER ── */
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.price-item {
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+.price-item .item-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+.price-item .item-range {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--olive);
+}
+.price-item .item-note {
+  font-size: 9px;
+  color: var(--charcoal-light);
+  margin-top: 2px;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ HERO ═══════ -->
+<div class="hero">
+  <div class="hero-logo">
+    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="65" r="35" stroke="#F5F0E8" stroke-width="2.5" fill="none"/>
+      <ellipse cx="60" cy="80" rx="12" ry="15" fill="#D4A017" opacity="0.3"/>
+      <path d="M60 55 C60 55, 45 45, 48 32 C50 24, 58 26, 60 30" stroke="#F5F0E8" stroke-width="2" fill="#4A5D23" opacity="0.9"/>
+      <path d="M60 55 C60 55, 75 45, 72 32 C70 24, 62 26, 60 30" stroke="#F5F0E8" stroke-width="2" fill="#6B7F3A" opacity="0.9"/>
+      <line x1="60" y1="55" x2="60" y2="78" stroke="#F5F0E8" stroke-width="2"/>
+      <circle cx="60" cy="80" r="6" fill="#D4A017"/>
+      <circle cx="60" cy="80" r="3" fill="#D4762C"/>
+    </svg>
+  </div>
+  <h1>MUSTARD SEED CO.</h1>
+  <div class="est">EST. 2026 &middot; PREMIUM CLOTHING</div>
+  <div class="tagline">Start Small. Build Big.</div>
+  <div class="sub">Brand Identity Kit &middot; V1.0</div>
+</div>
+
+<!-- ═══════ BRAND STORY ═══════ -->
+<section class="brand-story">
+  <div class="section-title">THE STORY</div>
+  <div class="divider"></div>
+  <p>
+    Every empire started as a seed. Every mountain was climbed one step at a time.
+    Mustard Seed Co. is for the ones building something from nothing —
+    the dreamers who put in the work, the grinders who stay faithful to the process.
+  </p>
+  <p style="margin-top:16px;">
+    Premium clothing for people who believe small beginnings lead to extraordinary things.
+  </p>
+  <div class="verse">"If you have faith as small as a mustard seed, you can say to this mountain, 'Move from here to there,' and it will move."</div>
+  <div class="ref">MATTHEW 17:20</div>
+</section>
+
+<!-- ═══════ COLOR PALETTE ═══════ -->
+<section class="palette">
+  <div class="section-title">COLOR PALETTE</div>
+  <div class="section-sub">The core brand colors</div>
+  <div class="divider"></div>
+
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background:var(--olive);">
+        <span style="color:rgba(255,255,255,0.7);">Primary</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Olive</div>
+        <div class="color-hex">#4A5D23</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:var(--mustard);">
+        <span style="color:rgba(0,0,0,0.5);">Accent</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Mustard Gold</div>
+        <div class="color-hex">#D4A017</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:var(--orange);">
+        <span style="color:rgba(255,255,255,0.7);">Pop</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Burnt Orange</div>
+        <div class="color-hex">#D4762C</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:var(--charcoal);">
+        <span style="color:rgba(255,255,255,0.5);">Dark</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Charcoal</div>
+        <div class="color-hex">#2C2C2C</div>
+      </div>
+    </div>
+    <div class="color-card color-full">
+      <div class="color-swatch" style="background:var(--cream);">
+        <span style="color:rgba(0,0,0,0.4);">Base</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Cream</div>
+        <div class="color-hex">#F5F0E8</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:white;border-radius:12px;padding:16px;margin-top:12px;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--olive);margin-bottom:8px;">COLOR USAGE</div>
+    <div style="font-size:12px;color:var(--charcoal-light);line-height:1.6;">
+      <strong style="color:var(--olive);">Olive</strong> — Primary brand color. Logos, headings, key UI.<br>
+      <strong style="color:var(--mustard);">Mustard</strong> — Accents, highlights, premium details.<br>
+      <strong style="color:var(--orange);">Orange</strong> — Energy pops. Tags, CTAs, limited drops.<br>
+      <strong style="color:var(--charcoal);">Charcoal</strong> — Body text, dark backgrounds. Never pure black.<br>
+      <strong style="color:#999;">Cream</strong> — Backgrounds, breathing room. The canvas.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ LOGO SYSTEM ═══════ -->
+<section class="logo-system">
+  <div class="section-title">LOGO SYSTEM</div>
+  <div class="section-sub">Three marks, one brand</div>
+  <div class="divider"></div>
+
+  <!-- Primary -->
+  <div class="logo-card">
+    <div class="badge">Primary</div>
+    <svg class="logo-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="40" stroke="#4A5D23" stroke-width="3" fill="none"/>
+      <path d="M100 80 C100 80, 82 68, 86 52 C88 42, 97 45, 100 50" stroke="#4A5D23" stroke-width="2.5" fill="#4A5D23"/>
+      <path d="M100 80 C100 80, 118 68, 114 52 C112 42, 103 45, 100 50" stroke="#4A5D23" stroke-width="2.5" fill="#6B7F3A"/>
+      <line x1="100" y1="80" x2="100" y2="110" stroke="#4A5D23" stroke-width="2.5"/>
+      <circle cx="100" cy="113" r="8" fill="#D4A017"/>
+      <circle cx="100" cy="113" r="4" fill="#D4762C"/>
+      <text x="100" y="165" text-anchor="middle" font-family="'Playfair Display',serif" font-size="16" font-weight="700" fill="#2C2C2C" letter-spacing="2">MUSTARD SEED CO.</text>
+      <text x="100" y="180" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A5D23" letter-spacing="3">EST. 2026</text>
+      <text x="100" y="195" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#999" letter-spacing="2">PREMIUM CLOTHING</text>
+    </svg>
+    <div class="label">Primary — Used everywhere. Website, tags, labels, social.</div>
+  </div>
+
+  <!-- Secondary -->
+  <div class="logo-card">
+    <div class="badge secondary">Secondary</div>
+    <svg class="logo-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="95" r="42" stroke="#4A5D23" stroke-width="3" fill="none"/>
+      <path d="M100 75 C100 75, 82 63, 86 47 C88 37, 97 40, 100 45" stroke="#4A5D23" stroke-width="2.5" fill="#4A5D23"/>
+      <path d="M100 75 C100 75, 118 63, 114 47 C112 37, 103 40, 100 45" stroke="#4A5D23" stroke-width="2.5" fill="#6B7F3A"/>
+      <line x1="100" y1="75" x2="100" y2="100" stroke="#4A5D23" stroke-width="2.5"/>
+      <circle cx="100" cy="103" r="6" fill="#D4A017"/>
+      <!-- Mountains inside seed -->
+      <path d="M72 120 L88 98 L96 108 L104 95 L120 120 Z" fill="#4A5D23" opacity="0.3"/>
+      <path d="M80 120 L94 102 L100 108 L108 98 L116 120 Z" fill="#4A5D23" opacity="0.2"/>
+      <text x="100" y="160" text-anchor="middle" font-family="'Playfair Display',serif" font-size="16" font-weight="700" fill="#2C2C2C" letter-spacing="2">MUSTARD SEED CO.</text>
+      <text x="100" y="175" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#D4762C" letter-spacing="3">FAITH MOVES MOUNTAINS</text>
+    </svg>
+    <div class="label">Secondary — Hoodies, patches, special collections.</div>
+  </div>
+
+  <!-- Icon Only -->
+  <div class="logo-card dark">
+    <div class="badge bold">Icon</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="22" stroke="#F5F0E8" stroke-width="2" fill="none"/>
+        <path d="M30 22 C30 22, 22 16, 24 8 C25 4, 29 5, 30 8" fill="#6B7F3A"/>
+        <path d="M30 22 C30 22, 38 16, 36 8 C35 4, 31 5, 30 8" fill="#4A5D23"/>
+        <line x1="30" y1="22" x2="30" y2="36" stroke="#F5F0E8" stroke-width="1.5"/>
+        <circle cx="30" cy="38" r="4" fill="#D4A017"/>
+        <circle cx="30" cy="38" r="2" fill="#D4762C"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="22" stroke="#D4A017" stroke-width="2" fill="none"/>
+        <path d="M30 22 C30 22, 22 16, 24 8 C25 4, 29 5, 30 8" fill="#D4A017"/>
+        <path d="M30 22 C30 22, 38 16, 36 8 C35 4, 31 5, 30 8" fill="#E8B830"/>
+        <line x1="30" y1="22" x2="30" y2="36" stroke="#D4A017" stroke-width="1.5"/>
+        <circle cx="30" cy="38" r="4" fill="#D4762C"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="22" stroke="#D4762C" stroke-width="2" fill="none"/>
+        <path d="M30 22 C30 22, 22 16, 24 8 C25 4, 29 5, 30 8" fill="#D4762C"/>
+        <path d="M30 22 C30 22, 38 16, 36 8 C35 4, 31 5, 30 8" fill="#E8944A"/>
+        <line x1="30" y1="22" x2="30" y2="36" stroke="#D4762C" stroke-width="1.5"/>
+        <circle cx="30" cy="38" r="4" fill="#D4A017"/>
+      </svg>
+    </div>
+    <div class="label" style="margin-top:20px;">Icon only — Favicons, social avatars, sleeve hits, sticker centers.</div>
+  </div>
+
+  <!-- Wordmark Only -->
+  <div class="logo-card">
+    <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;letter-spacing:3px;color:var(--olive);">MUSTARD SEED CO.</div>
+    <div style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:4px;color:var(--charcoal-light);margin-top:4px;">START SMALL. BUILD BIG.</div>
+    <div class="label">Wordmark — Minimal applications. Waistbands, interior tags.</div>
+  </div>
+</section>
+
+<!-- ═══════ TYPOGRAPHY ═══════ -->
+<section class="type-section">
+  <div class="section-title">TYPOGRAPHY</div>
+  <div class="section-sub">Three typefaces, clear hierarchy</div>
+  <div class="divider"></div>
+
+  <div class="type-sample">
+    <div class="font-name">Playfair Display — Headlines</div>
+    <div class="display">Start Small.<br>Build Big.</div>
+    <div class="usage">Brand name, headlines, product titles, hero text</div>
+  </div>
+
+  <div class="type-sample">
+    <div class="font-name">Bebas Neue — Impact</div>
+    <div class="bebas">MUSTARD SEED CO.</div>
+    <div class="usage">Back prints, section headers, bold statements, tee graphics</div>
+  </div>
+
+  <div class="type-sample">
+    <div class="font-name">Inter — Body & UI</div>
+    <div class="body-text">Premium clothing for people who believe small beginnings lead to extraordinary things. Every piece is designed with intention.</div>
+    <div class="usage">Body copy, descriptions, labels, website text, tags</div>
+  </div>
+</section>
+
+<!-- ═══════ MOCKUPS ═══════ -->
+<section class="mockups">
+  <div class="section-title">ON PRODUCT</div>
+  <div class="section-sub">How the brand lives on apparel</div>
+  <div class="divider"></div>
+
+  <!-- Front Tee -->
+  <div class="mockup-card">
+    <div class="mockup-visual tee-mockup">
+      <div class="mockup-tag">Front Hit</div>
+      <div class="tee-shape">
+        <svg width="70" height="80" viewBox="0 0 70 80" fill="none" class="logo-on-tee">
+          <circle cx="35" cy="30" r="18" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+          <path d="M35 22 C35 22, 28 17, 30 10 C31 6, 34 7, 35 10" fill="#6B7F3A"/>
+          <path d="M35 22 C35 22, 42 17, 40 10 C39 6, 36 7, 35 10" fill="#4A5D23"/>
+          <line x1="35" y1="22" x2="35" y2="35" stroke="#F5F0E8" stroke-width="1.5"/>
+          <circle cx="35" cy="37" r="3.5" fill="#D4A017"/>
+          <circle cx="35" cy="37" r="1.5" fill="#D4762C"/>
+          <text x="35" y="58" text-anchor="middle" font-family="'Playfair Display',serif" font-size="6.5" font-weight="700" fill="#F5F0E8" letter-spacing="1">MUSTARD SEED CO.</text>
+          <text x="35" y="67" text-anchor="middle" font-family="Inter,sans-serif" font-size="3.5" fill="#D4A017" letter-spacing="1.5">EST. 2026</text>
+        </svg>
+      </div>
+    </div>
+    <div class="mockup-info">
+      <h3>Classic Tee — Front</h3>
+      <p>Left chest or center placement. Primary logo on charcoal blank. Clean and premium.</p>
+    </div>
+  </div>
+
+  <!-- Back Print -->
+  <div class="mockup-card">
+    <div class="mockup-visual back-mockup">
+      <div class="mockup-tag">Back Print</div>
+      <div class="back-tee">
+        <svg width="160" height="180" viewBox="0 0 160 180" fill="none">
+          <!-- Large mountain scene -->
+          <path d="M20 130 L55 70 L70 90 L90 55 L110 85 L140 130 Z" fill="#4A5D23" opacity="0.9"/>
+          <path d="M30 130 L60 80 L75 95 L95 65 L115 90 L135 130 Z" fill="#6B7F3A" opacity="0.6"/>
+          <!-- Sun/seed -->
+          <circle cx="120" cy="50" r="12" fill="#D4A017" opacity="0.8"/>
+          <circle cx="120" cy="50" r="6" fill="#D4762C" opacity="0.9"/>
+          <!-- Text -->
+          <text x="80" y="148" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="18" fill="#F5F0E8" letter-spacing="5">MUSTARD SEED CO.</text>
+          <text x="80" y="162" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#D4A017" letter-spacing="3">START SMALL. BUILD BIG.</text>
+        </svg>
+      </div>
+    </div>
+    <div class="mockup-info">
+      <h3>Classic Tee — Back</h3>
+      <p>Full back print. Mountain landscape with Bebas Neue wordmark. The statement piece.</p>
+    </div>
+  </div>
+
+  <!-- Hoodie -->
+  <div class="mockup-card">
+    <div class="mockup-visual hoodie-mockup">
+      <div class="mockup-tag">Hoodie</div>
+      <div class="hoodie-shape">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+          <circle cx="60" cy="45" r="25" stroke="#D4A017" stroke-width="2" fill="none"/>
+          <path d="M60 35 C60 35, 50 28, 52 18 C53 12, 59 14, 60 18" fill="#D4A017"/>
+          <path d="M60 35 C60 35, 70 28, 68 18 C67 12, 61 14, 60 18" fill="#E8B830"/>
+          <line x1="60" y1="35" x2="60" y2="52" stroke="#D4A017" stroke-width="2"/>
+          <circle cx="60" cy="55" r="5" fill="#D4762C"/>
+          <!-- Mountains in seed -->
+          <path d="M42 62 L52 48 L57 54 L63 45 L72 62 Z" fill="#D4A017" opacity="0.2"/>
+          <text x="60" y="85" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" font-weight="700" fill="#F5F0E8" letter-spacing="1.5">MUSTARD SEED CO.</text>
+          <text x="60" y="97" text-anchor="middle" font-family="Inter,sans-serif" font-size="5" fill="#D4A017" letter-spacing="2">FAITH MOVES MOUNTAINS</text>
+        </svg>
+      </div>
+    </div>
+    <div class="mockup-info">
+      <h3>Heavyweight Hoodie</h3>
+      <p>Secondary logo in mustard gold on olive blank. Center chest. Faith collection.</p>
+    </div>
+  </div>
+
+  <!-- Hat -->
+  <div class="mockup-card">
+    <div class="mockup-visual hat-mockup">
+      <div class="mockup-tag">Structured Hat</div>
+      <div class="hat-shape">
+        <svg width="60" height="50" viewBox="0 0 60 50" fill="none">
+          <circle cx="30" cy="22" r="14" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+          <path d="M30 16 C30 16, 24 12, 25 6 C26 3, 29 4, 30 6" fill="#D4A017"/>
+          <path d="M30 16 C30 16, 36 12, 35 6 C34 3, 31 4, 30 6" fill="#E8B830"/>
+          <line x1="30" y1="16" x2="30" y2="26" stroke="#F5F0E8" stroke-width="1.5"/>
+          <circle cx="30" cy="28" r="3" fill="#D4762C"/>
+        </svg>
+        <div class="hat-brim"></div>
+      </div>
+    </div>
+    <div class="mockup-info">
+      <h3>Structured 5-Panel</h3>
+      <p>Embroidered icon on olive. Mustard seed in orange pop. Clean, minimal, daily wear.</p>
+    </div>
+  </div>
+
+  <!-- Stickers -->
+  <div class="mockup-card">
+    <div class="mockup-visual sticker-mockup">
+      <div class="mockup-tag">Stickers</div>
+      <div class="sticker olive">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="18" r="10" stroke="#F5F0E8" stroke-width="1" fill="none"/>
+          <path d="M20 14 C20 14, 16 11, 17 6 C17 4, 19 4, 20 6" fill="#D4A017"/>
+          <path d="M20 14 C20 14, 24 11, 23 6 C23 4, 21 4, 20 6" fill="#E8B830"/>
+          <line x1="20" y1="14" x2="20" y2="22" stroke="#F5F0E8" stroke-width="1"/>
+          <circle cx="20" cy="23" r="2" fill="#D4762C"/>
+        </svg>
+        <div style="font-size:5px;color:#F5F0E8;letter-spacing:1px;margin-top:2px;font-weight:700;">MSC</div>
+      </div>
+      <div class="sticker mustard">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <text x="20" y="18" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="7" fill="#2C2C2C" letter-spacing="2">START SMALL</text>
+          <text x="20" y="28" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="7" fill="#2C2C2C" letter-spacing="2">BUILD BIG</text>
+        </svg>
+      </div>
+      <div class="sticker orange">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="8" fill="#F5F0E8" opacity="0.3"/>
+          <circle cx="20" cy="20" r="5" fill="#F5F0E8"/>
+        </svg>
+        <div style="font-size:4.5px;color:#F5F0E8;letter-spacing:1px;margin-top:2px;font-weight:700;">THE SEED</div>
+      </div>
+    </div>
+    <div class="mockup-info">
+      <h3>Die-Cut Stickers</h3>
+      <p>Three colorways. Include free with every order. Olive, mustard, burnt orange.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PRODUCT LINE ═══════ -->
+<section class="lineup" style="background:var(--cream);">
+  <div class="section-title">LAUNCH LINEUP</div>
+  <div class="section-sub">Drop 1 — Core Collection</div>
+  <div class="divider"></div>
+
+  <div class="product-card">
+    <div class="product-icon charcoal-bg">👕</div>
+    <div class="product-info">
+      <h3>Classic Logo Tee</h3>
+      <p>Heavyweight 6oz cotton. Primary logo front, mountain back print. Charcoal & Cream.</p>
+      <div class="price">$35 — $40</div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-icon olive-bg">🧥</div>
+    <div class="product-info">
+      <h3>Faith Hoodie</h3>
+      <p>14oz heavyweight fleece. Secondary logo center chest. Olive & Charcoal.</p>
+      <div class="price">$65 — $75</div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-icon mustard-bg">🧢</div>
+    <div class="product-info">
+      <h3>Seed Hat</h3>
+      <p>Structured 5-panel. Embroidered icon. Olive, Charcoal, Cream colorways.</p>
+      <div class="price">$30 — $35</div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-icon orange-bg">🎒</div>
+    <div class="product-info">
+      <h3>Sticker Pack (3ct)</h3>
+      <p>Die-cut vinyl. Three colorways. Free with orders over $50, or sold separately.</p>
+      <div class="price">$5 / FREE w/ order</div>
+    </div>
+  </div>
+
+  <div style="background:white;border-radius:12px;padding:16px;margin-top:16px;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--olive);margin-bottom:8px;">SUGGESTED RETAIL PRICING</div>
+    <div class="price-grid">
+      <div class="price-item">
+        <div class="item-name">Tees</div>
+        <div class="item-range">$35–$40</div>
+        <div class="item-note">COGS ~$12–15</div>
+      </div>
+      <div class="price-item">
+        <div class="item-name">Hoodies</div>
+        <div class="item-range">$65–$75</div>
+        <div class="item-note">COGS ~$22–28</div>
+      </div>
+      <div class="price-item">
+        <div class="item-name">Hats</div>
+        <div class="item-range">$30–$35</div>
+        <div class="item-note">COGS ~$10–14</div>
+      </div>
+      <div class="price-item">
+        <div class="item-name">Stickers</div>
+        <div class="item-range">$5 / Free</div>
+        <div class="item-note">COGS ~$0.50</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ USAGE GUIDELINES ═══════ -->
+<section class="usage-section">
+  <div class="section-title">USAGE RULES</div>
+  <div class="section-sub">Protect the brand</div>
+  <div class="divider"></div>
+
+  <div class="do-dont">
+    <div class="do-card">
+      <h4>✓ Do</h4>
+      <p>Use on solid backgrounds (olive, charcoal, cream, white)</p>
+    </div>
+    <div class="dont-card">
+      <h4>✕ Don't</h4>
+      <p>Place on busy photos without a solid backing</p>
+    </div>
+    <div class="do-card">
+      <h4>✓ Do</h4>
+      <p>Maintain clear space around the logo (1x seed width)</p>
+    </div>
+    <div class="dont-card">
+      <h4>✕ Don't</h4>
+      <p>Stretch, rotate, or alter the proportions</p>
+    </div>
+    <div class="do-card">
+      <h4>✓ Do</h4>
+      <p>Use brand colors only — olive, mustard, orange, charcoal, cream</p>
+    </div>
+    <div class="dont-card">
+      <h4>✕ Don't</h4>
+      <p>Add drop shadows, gradients, or outline effects</p>
+    </div>
+  </div>
+
+  <div style="background:white;border-radius:12px;padding:16px;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--orange);margin-bottom:8px;">MINIMUM SIZES</div>
+    <div style="font-size:12px;color:var(--charcoal-light);line-height:1.8;">
+      • Full logo (icon + wordmark): 1.5" wide minimum<br>
+      • Icon only: 0.5" minimum<br>
+      • Wordmark only: 1" wide minimum<br>
+      • Embroidery: Icon only below 2" width
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <strong>MUSTARD SEED CO.</strong><br>
+  EST. 2026 &middot; START SMALL. BUILD BIG.<br><br>
+  Brand Kit V1.0 &middot; April 2026<br>
+  Designed for Carlos Sandoval
+</footer>
+
+</body>
+</html>
